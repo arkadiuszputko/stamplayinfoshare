@@ -1,0 +1,10 @@
+{
+  "appId": "apinfoshareapp",
+  "apiKey": "e0a8c5caa94a53f3923c27522c33cc0f058309e2e0fd8f2c9e6d042614d5716d",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
