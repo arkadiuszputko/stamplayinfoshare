@@ -40,7 +40,6 @@
   },
   "scripts": {
     "preinstall": "npm cache clean",
-    "postinstall": "bower install; grunt build",
     "test": "grunt test",
     "start": "node server.js"
   },
