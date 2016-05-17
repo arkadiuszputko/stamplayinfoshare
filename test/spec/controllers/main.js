@@ -5,19 +5,29 @@ describe('Controller: MainCtrl', function () {
   // load the controller's module
   beforeEach(module('stamplayInfoshareApp'));
 
-  var MainCtrl,
-    scope;
+  var $scope,
+    deferred,
+    $q;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope) {
-    scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
-      $scope: scope
+  beforeEach(inject(function ($controller, _$q_, $rootScope, awesomething) {
+    $scope = $rootScope.$new();
+    $q = _$q_;
+
+    deferred = _$q_.defer();
+
+    spyOn(awesomething, 'get').and.returnValue(deferred.promise);
+    $controller('MainCtrl', {
+      $scope: $scope,
+      awesomething: awesomething
       // place here mocked dependencies
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(MainCtrl.awesomeThings.length).toBe(3);
+    deferred.resolve({data: []});
+    $scope.$apply();
+    console.log($scope.awesomeThings);
+    expect($scope.awesomeThings.length).toBe(0);
   });
 });

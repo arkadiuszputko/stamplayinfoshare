@@ -8,12 +8,12 @@
  * Controller of the stamplayInfoshareApp
  */
 angular.module('stamplayInfoshareApp')
-  .controller('MainCtrl', function ($scope, $stamplay) {
-    $stamplay.Object('awesomething').get()
+  .controller('MainCtrl', function ($scope, awesomething) {
+    $scope.awesomeThings = [];
+    awesomething.get()
       .then(function(res) {
-        this.awesomeThings = res;
+        $scope.awesomeThings = res.data;
       }, function(err) {
         console.log(err);
       });
-
   });
