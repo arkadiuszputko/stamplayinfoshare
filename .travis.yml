@@ -18,5 +18,9 @@ deploy:
   on:
     master
   run:
+  - npm install
+  - npm install -g bower
+  - bower install
+  - npm install grunt-cli -g
   - grunt build
   - node server.js
