@@ -46,6 +46,7 @@
   "dependencies": {
     "bower": "1.7.x",
     "grunt": "^0.4.5",
+    "jit-grunt": "^0.9.1",
     "grunt-cli": "0.1.13",
     "time-grunt": "^1.0.0",
     "express": "^4.13.4"
