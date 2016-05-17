@@ -12,7 +12,6 @@ angular.module('stamplayInfoshareApp')
     $stamplay.Object('awesomething').get()
       .then(function(res) {
         this.awesomeThings = res;
-        console.log(res);
       }, function(err) {
         console.log(err);
       });
