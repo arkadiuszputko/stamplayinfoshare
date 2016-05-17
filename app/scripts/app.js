@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+Stamplay.init('apinfoshareapp');
 angular
   .module('stamplayInfoshareApp', [
     'ngAnimate',
