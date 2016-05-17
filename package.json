@@ -49,6 +49,7 @@
     "jit-grunt": "^0.9.1",
     "grunt-cli": "0.1.13",
     "time-grunt": "^1.0.0",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "jshint-stylish": "^1.0.0"
   }
 }
